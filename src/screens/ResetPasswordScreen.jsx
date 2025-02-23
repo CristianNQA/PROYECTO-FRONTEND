@@ -12,7 +12,8 @@ const ResetPasswordScreen = () => {
             const response = await fetch(`${ENVIRONMENT.API_URL}/api/auth/reset-password?reset_token=${reset_token}`,{
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'x-api-key': ENVIRONMENT.API_KEY
                 },
                 body: JSON.stringify(form_state)
         })

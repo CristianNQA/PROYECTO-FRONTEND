@@ -10,7 +10,8 @@ const ForgotPasswordScreen = () => {
       const response = await fetch(ENVIRONMENT.API_URL + '/api/auth/forgot-password',{
         method: "POST", 
         headers: {
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
+            'x-api-key': ENVIRONMENT.API_KEY
           },
           body: JSON.stringify(form_state)
         })

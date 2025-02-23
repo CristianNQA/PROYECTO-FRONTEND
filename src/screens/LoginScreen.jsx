@@ -24,7 +24,8 @@ const LoginScreen = () => {
                 {
                     method: "POST",
                     headers:{
-                        'Content-Type': "application/json"
+                        'Content-Type': "application/json",
+                        'x-api-key': ENVIRONMENT.API_KEY
                     },
                     body: JSON.stringify(form_state)
                 }

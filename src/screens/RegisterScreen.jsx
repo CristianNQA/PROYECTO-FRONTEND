@@ -12,7 +12,8 @@ const RegisterScreen = () => {
             const res = await fetch(ENVIRONMENT.API_URL + "/api/auth/register", {
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'x-api-key': ENVIRONMENT.API_KEY
 
                 },
                 body: JSON.stringify(form_state)
